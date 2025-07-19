@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pkl
+*.joblib
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Data Files
+data/
+
+# Environment & Dependency
+.env
+.venv/
+env/
+venv/
+*.env
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook Metadata (optional)
+*.nbconvert.ipynb
+*.nbformat.*
+
+# Logs
+*.log

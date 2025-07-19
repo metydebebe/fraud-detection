@@ -1,0 +1,11 @@
+# Core
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+jupyter
+shap
+imbalanced-learn
+ipaddress
+plotly
