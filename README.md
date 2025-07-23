@@ -39,3 +39,56 @@ conda activate fraud-detection
 ## Output
 
 data/cleaned_fraud_data.csv
+
+# Task 2 - Model Building and Training
+
+## Objective
+
+To build and compare fraud detection models using two different machine learning algorithms on the preprocessed dataset from Task 1.
+
+## Dataset Used
+
+- `cleaned_fraud_df.csv` from Task 1 (based on `Fraud_Data.csv`)
+
+## Steps Performed
+
+### 1. Data Preparation
+
+- Target column: `class`
+- Features: All numeric features (categorical columns one-hot encoded)
+- Train-test split: 80/20 with stratification to maintain class balance
+- Feature scaling applied using `StandardScaler`
+
+### 2. Model Training
+
+Two models were trained on the prepared dataset:
+
+- **Logistic Regression** (`class_weight='balanced'`)
+- **Random Forest Classifier** (`n_estimators=100`, `class_weight='balanced'`)
+
+### 3. Model Evaluation
+
+Both models were evaluated using metrics suitable for imbalanced classification:
+
+- **Confusion Matrix**
+- **Classification Report**
+- **F1 Score**
+- **AUC-PR**
+
+#### Results Summary:
+
+| Metric   | Logistic Regression | Random Forest |
+| -------- | ------------------- | ------------- |
+| F1 Score | 0.6112              | 0.6907        |
+| AUC-PR   | 0.4074              | 0.5718        |
+
+> **Conclusion:** Random Forest performed better across all evaluation metrics, especially in handling the imbalanced nature of the dataset. It is selected for further interpretation in Task 3.
+
+### 4. Outputs
+
+- Scaled and labeled training/testing datasets:
+  - `data/processed/X_train_task2.csv`
+  - `data/processed/X_test_task2.csv`
+- Trained model files:
+  - `models/logistic_regression_model.pkl`
+  - `models/random_forest_model.pkl`
