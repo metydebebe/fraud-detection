@@ -92,3 +92,37 @@ Both models were evaluated using metrics suitable for imbalanced classification:
 - Trained model files:
   - `models/logistic_regression_model.pkl`
   - `models/random_forest_model.pkl`
+
+# Task 3 – Model Explainability with SHAP
+
+## Overview
+
+This task focuses on interpreting the best-performing fraud detection model (Random Forest) using SHAP (Shapley Additive explanations). SHAP provides insight into the contribution of each feature to individual predictions and overall model behavior.
+
+## Key Steps
+
+Loaded the trained Random Forest model from Task 2.
+
+Selected a representative sample of test data for explanation.
+
+Computed SHAP values using the TreeExplainer to quantify feature importance for the fraud class.
+
+Generated visualizations:
+
+Local Force Plot: Explains individual prediction contributions for specific instances.
+
+Bar Plot: Highlights average feature importance specifically for the fraud class.
+
+## Files
+
+task3_model_explainability.ipynb – Jupyter notebook with all code and plots.
+
+outputs/force_plot_instance5.html – Saved interactive force plot for a sample transaction.
+
+## How to Run
+
+Ensure the Random Forest model file (random_forest_model.pkl) from Task 2 is in the models/ folder.
+
+Run task3_model_explainability.ipynb to reproduce all SHAP computations and plots.
+
+Visualize saved plots in the outputs/ directory if desired.
